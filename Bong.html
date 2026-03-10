@@ -41,7 +41,7 @@
 
 
     <!-- Topbar Start -->
-    <div class="container-fluid bg-dark text-light px-0 py-2">
+    <div class="container-fluid text-light px-0 py-2" style="background-color:#6B4423;">
         <div class="row gx-0 d-none d-lg-flex">
             <div class="col-lg-7 px-5 text-start">
                 <div class="h-100 d-inline-flex align-items-center me-4">
@@ -69,8 +69,8 @@
 
     <!-- Navbar Start -->
     <nav class="navbar navbar-expand-lg bg-white navbar-light sticky-top p-0">
-        <img src="img/mylogo.png" class="img-fluid w-60" alt="">
-        <a href="index.html" class="navbar-brand d-flex align-items-center px-4 px-lg-5">
+         <img src="img/mylogo.png" class="img-fluid w-60" alt="">
+                <a href="index.html" class="navbar-brand d-flex align-items-center px-4 px-lg-5">
             <h1 class="m-0">Soils4Liberia</h1>
         </a>
         <button type="button" class="navbar-toggler me-4" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
@@ -79,15 +79,31 @@
         <div class="collapse navbar-collapse" id="navbarCollapse">
             <div class="navbar-nav ms-auto p-4 p-lg-0">
                 <a href="index.html" class="nav-item nav-link">Home</a>
-                <a href="about.html" class="nav-item nav-link">About</a>
+                <div class="nav-item dropdown">
+    <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">About</a>
+    <div class="dropdown-menu bg-light m-0">
+        <a href="about.html" class="dropdown-item">Project Overview</a>
+        <a href="objectives.html" class="dropdown-item">Project Objectives</a>
+        <a href="team.html" class="dropdown-item">Project Team</a>
+        <a href="funding.html" class="dropdown-item">Funding & Support</a>
+        <a href="impact.html" class="dropdown-item">Impact & Outcomes</a>
+    </div>
+</div>
                 <a href="service.html" class="nav-item nav-link">Documents</a>
-                <a href="project.html" class="nav-item nav-link">Field Campaign</a>
-      <div class="nav-item dropdown">
-                    <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">Counties</a>
+
+                <a href="Field Campaign.html" class="nav-item nav-link">Field Campaign</a>
+             <a href="feature.html" class="nav-item nav-link">Newsletter</a>
+
+                <div class="nav-item dropdown">
+                    <a href="#" class="nav-link active dropdown-toggle" data-bs-toggle="dropdown">Pages</a>
                     <div class="dropdown-menu bg-light m-0">
+                                               
+                        
+                        <a href="testimonial.html" class="dropdown-item">Testimonial</a>
+                        <a href="404.html" class="dropdown-item">Images & Videos</a>
                         <a href="Bomi County.html" class="dropdown-item">Bomi</a>
                        
-                        <a href="Bong.html" class="dropdown-item">Bong</a>
+                        <a href="Bong.html" class="dropdown-item active">Bong</a>
                         <a href="Gbarpolu.html" class="dropdown-item">Gbarpolu</a>
                         <a href="Grand Bassa.html" class="dropdown-item">Grand Bassa</a>
                         <a href="Grand Cape Mount.html" class="dropdown-item">Grand Cape Mount</a>
@@ -102,21 +118,10 @@
                         <a href="River Gee.html" class="dropdown-item">River Gee</a>
                         <a href="Sinoe.html" class="dropdown-item">Sinoe</a>
                     </div>
-                
-            </div>
-                <div class="nav-item dropdown">
-                    <a href="#" class="nav-link dropdown-toggle active" data-bs-toggle="dropdown">Pages</a>
-                    <div class="dropdown-menu bg-light m-0">
-                        <a href="feature.html" class="dropdown-item">Newsletter</a>
-                        
-                        <a href="team.html" class="dropdown-item">Project Team</a>
-                        <a href="testimonial.html" class="dropdown-item">Testimonial</a>
-                        <a href="404.html" class="dropdown-item active">Images & Videos</a>
-                    </div>
                 </div>
                 <a href="contact.html" class="nav-item nav-link">Contact</a>
             </div>
-            
+          
         </div>
     </nav>
     <!-- Navbar End -->
