@@ -190,12 +190,105 @@
                     and a series of instructional videos to be shared soon.
                 </li>
             </ul>
+<section class="container my-5 fade-in" id="paragraph-901">
+  <div class="row g-4">
 
-            <p class="fw-semibold mt-4">
-                Watch this space for subsequent updates!
-            </p>
-        </div>
+    <!-- Card 1 -->
+    <div class="col-md-6">
+      <div class="card h-100 shadow-sm p-3 border-0">
+
+        <h5 class="mb-3 title-animate">Protocol for Nationwide Soil Inventory</h5>
+
+        <img 
+          src="img/Protocol.jpg" 
+          alt="Soil Inventory Reference"
+          class="img-fluid rounded image-hover mb-3"
+        >
+
+        <a 
+          href="img/icon/Protocols for Nation-Wide Soil Inventory_v1.pdf" 
+          target="_blank" 
+          rel="noopener noreferrer"
+          class="btn btn-primary btn-animate"
+        >
+          Download Document
+        </a>
+
+      </div>
     </div>
+
+    <!-- Card 2 -->
+    <div class="col-md-6">
+      <div class="card h-100 shadow-sm p-3 border-0">
+
+        <h5 class="mb-3 title-animate">Standard Operating Procedure for Soil Sample 
+Collection and Field Observations</h5>
+
+        <img 
+          src="img/SOP.jpg" 
+          alt="Soil Inventory Reference"
+          class="img-fluid rounded image-hover mb-3"
+        >
+
+        <a 
+          href="img/icon/SOP_fieldsurvey_v1.pdf" 
+          target="_blank" 
+          rel="noopener noreferrer"
+          class="btn btn-primary btn-animate"
+        >
+          Download Document
+        </a>
+
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- CSS Animations -->
+<style>
+/* Fade-in on load */
+.fade-in {
+  animation: fadeIn 1s ease-in-out;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Title hover */
+.title-animate {
+  transition: transform 0.3s ease;
+}
+.title-animate:hover {
+  transform: translateX(5px);
+}
+
+/* Image hover */
+.image-hover {
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
+}
+.image-hover:hover {
+  transform: scale(1.05);
+  box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+}
+
+/* Button hover */
+.btn-animate {
+  transition: all 0.3s ease;
+}
+.btn-animate:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 15px rgba(0,0,0,0.2);
+}
+</style>
 </div>
     <!-- Projects End -->
 
