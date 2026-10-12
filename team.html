@@ -198,20 +198,190 @@
                     </div>
                 </div>
 
-             <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.3s">
-                    <div class="team-item rounded">
-                        <img class="img-fluid" src="img/team-4.jpg" alt="">
-                        <div class="team-text">
-                            <h4 class="mb-0">Ms. Josephine Kokeh</h4>
-                            <p class="text-primary">Station Administrator, IITA</p>
-                            <div class="team-social d-flex">
-                                <a class="btn btn-square rounded-circle me-2" href="https://www.facebook.com/share/18s5ZbBHuU/"target="_blank"><i class="fab fa-facebook-f"></i></a>
-                                <a class="btn btn-square rounded-circle me-2" href=""><i class="fab fa-twitter"></i></a>
-                                <a class="btn btn-square rounded-circle me-2" href="https://www.linkedin.com/in/josephine-y-kokeh-21465620a"target="_blank"><i class="fab fa-linkedin"></i></a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+             <style>
+    /* Biography scroll area */
+    .team-bio {
+        max-height: 180px;
+        overflow-y: auto;
+        overflow-x: hidden;
+        padding-right: 8px;
+        line-height: 1.6;
+        scrollbar-width: thin;
+        scrollbar-color: #00aaff #f1f1f1;
+    }
+
+    /* WebKit scrollbar styling */
+    .team-bio::-webkit-scrollbar {
+        width: 6px;
+    }
+
+    .team-bio::-webkit-scrollbar-track {
+        background: #f1f1f1;
+        border-radius: 10px;
+    }
+
+    .team-bio::-webkit-scrollbar-thumb {
+        background: #00aaff;
+        border-radius: 10px;
+    }
+
+    .team-bio::-webkit-scrollbar-thumb:hover {
+        background: #0066cc;
+    }
+
+    .more-text.d-none {
+        display: none !important;
+    }
+
+    .read-more-btn {
+        text-decoration: none;
+        font-weight: 600;
+        color: #007bff;
+    }
+
+    .read-more-btn:hover {
+        color: #0056b3;
+        text-decoration: underline;
+    }
+</style>
+
+<div class="col-lg-4 col-md-6 wow fadeInUp"
+     data-wow-delay="0.3s">
+
+    <div class="team-item rounded shadow-sm h-100">
+
+        <img class="img-fluid w-100"
+             src="img/team-4.jpg"
+             alt="Ms. Josephine Kokeh">
+
+        <div class="team-text p-4">
+
+            <h4 class="mb-1">Ms. Josephine Kokeh</h4>
+
+            <p class="text-primary mb-2">
+                Station Administrator, IITA
+            </p>
+
+            <hr style="border:0; height:2px;
+                background:linear-gradient(to right,#00f,#0ff);
+                margin-bottom:10px;">
+
+            <!-- Scrollable biography -->
+            <div class="team-bio text-primary small"
+                 tabindex="0"
+                 aria-label="Biography of Ms. Josephine Kokeh">
+
+                <p class="mb-0">
+                    Josephine Y. Kokeh is an accomplished Finance
+                    and Operations Professional with over a decade
+                    of expertise managing corporate accounting,
+                    public sector finance,
+
+                    <span class="more-text d-none">
+                        and international project workflows. She has
+                        worked as an Accountant and Project Coordinator
+                        at the Central Agricultural Research Institute
+                        (CARI). Josephine has a strong track record
+                        supporting major agricultural research
+                        institutions, having also served as a Project
+                        Accountant and Administrative Assistant for
+                        AfricaRice, Liberia, and currently as a Project
+                        Administrator at the International Institute of
+                        Tropical Agriculture (IITA).
+
+                        Highly educated on an international scale,
+                        Josephine holds a B.A. in Accounting with an
+                        emphasis in Economics from Cuttington University,
+                        a master's degree in Project Management, and a
+                        master's degree in Digital Marketing and Business
+                        Transformation from Rome Business School.
+
+                        Equipped with exceptional skills in budgetary
+                        control, audit compliance, project management,
+                        and partnership coordination, Josephine excels
+                        at leading complex administrative and financial
+                        operations.
+
+                        Her 14-year career, spanning from 2012 to the
+                        present, demonstrates professional stability
+                        and growth across major agricultural research
+                        institutions, including CARI, AfricaRice, and IITA.
+                    </span>
+                </p>
+
+            </div>
+
+            <!-- Expand / collapse button -->
+            <button type="button"
+                    class="btn btn-link p-0 mt-2 read-more-btn"
+                    onclick="toggleReadMore(this)"
+                    aria-expanded="false">
+                Read More
+            </button>
+
+            <!-- Social media links -->
+            <div class="team-social d-flex mt-3">
+
+                <a class="btn btn-square rounded-circle me-2"
+                   href="https://www.facebook.com/share/18s5ZbBHuU/"
+                   target="_blank"
+                   rel="noopener noreferrer"
+                   aria-label="Facebook">
+                    <i class="fab fa-facebook-f"></i>
+                </a>
+
+                <a class="btn btn-square rounded-circle me-2"
+                   href="https://x.com/"
+                   target="_blank"
+                   rel="noopener noreferrer"
+                   aria-label="X">
+                    <i class="fab fa-twitter"></i>
+                </a>
+
+                <a class="btn btn-square rounded-circle me-2"
+                   href="https://www.linkedin.com/in/josephine-y-kokeh-21465620a"
+                   target="_blank"
+                   rel="noopener noreferrer"
+                   aria-label="LinkedIn">
+                    <i class="fab fa-linkedin-in"></i>
+                </a>
+
+            </div>
+        </div>
+    </div>
+</div>
+
+<script>
+function toggleReadMore(btn) {
+    const teamItem = btn.closest('.team-item');
+    const biography = teamItem.querySelector('.team-bio');
+    const moreText = biography.querySelector('.more-text');
+
+    if (!biography || !moreText) return;
+
+    const isExpanded =
+        btn.getAttribute('aria-expanded') === 'true';
+
+    if (isExpanded) {
+        // Collapse the biography
+        moreText.classList.add('d-none');
+        biography.style.maxHeight = '180px';
+        biography.scrollTop = 0;
+
+        btn.textContent = 'Read More';
+        btn.setAttribute('aria-expanded', 'false');
+    } else {
+        // Expand the biography and enable vertical scrolling
+        moreText.classList.remove('d-none');
+        biography.style.maxHeight = '300px';
+
+        btn.textContent = 'Read Less';
+        btn.setAttribute('aria-expanded', 'true');
+    }
+}
+</script>
+
+            
 
                <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.3s">
     <div class="team-item rounded shadow-sm h-100">
